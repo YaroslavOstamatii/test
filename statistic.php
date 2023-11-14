@@ -58,6 +58,7 @@
 </head>
 <body>
 <div class="form">
+    <a class="paginat" href="index.php">Назад</a>
     <?php
     $name = $_POST['name'];
 
@@ -89,7 +90,7 @@
     echo '<p>Правильних питань: ' . $correct_answers_count . '</p>';
     echo '<p>Неправильні відповіді ' . (count($correctAnswers) - $correct_answers_count) . '</p>';
     ?>
-    <a class="paginat" href="index.php">Назад</a>
+
     <h1>Статистика</h1>
     <h1>Тест по PHP</h1>
 <div>
