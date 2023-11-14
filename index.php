@@ -50,7 +50,7 @@
 <body>
 
 <form action="statistic.php" method="post" >
-    <a class="paginat" href="statistic.php">Статистика</a>
+    <a class="paginat" href="move.php">Статистика</a>
     <h1>Тест по PHP</h1>
     <input class="inp" type="text" name="name" placeholder="Ваше ім'я">
     <p>
