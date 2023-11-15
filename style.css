@@ -1,0 +1,45 @@
+body {
+    border-top: 50px solid darkslateblue;
+    background-color: rgb(128, 128, 128);
+    margin: 0;
+    padding: 0;
+}
+div {
+    position:relative;
+    width: 550px;
+    margin: -50px auto 0px;
+    padding: 20px;
+    background-color: white;
+}
+a {
+    margin: 0 0 0 370px;
+    text-decoration: none;
+}
+button{
+    padding: 10px;
+    border:unset;
+    background: #9A72AC;
+    cursor:pointer;
+    border-radius: 5px;
+    margin: 0 0 0 370px;
+}
+.name{
+    width: 300px;
+    background: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    border:unset;
+
+}
+table {
+    border-spacing: 10px;
+    border-collapse: separate;
+    width: 500px;
+    position:relative;
+}
+
+th, td {
+    padding: 10px;
+    background-color: lightgrey;
+    text-align: center;
+}

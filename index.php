@@ -4,55 +4,17 @@
     <meta charset="UTF-8">
     <title>Вікторина</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            border-top: 50px solid darkslateblue;
-            background-color: rgb(128, 128, 128);
-            margin: 0;
-            padding: 0;
-        }
-
-        form {
-            position:relative;
-            width: 500px;
-            margin: -50px auto 0px;
-            padding: 20px;
-            background-color: white;
-        }
-
-        h1 {
-            color: black;
-            font-size: 20px;
-        }
-
-        p {
-            margin-bottom: 10px;
-        }
-        input[type="submit"] {
-            width: 110px;
-            height: 40px;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #9A72AC;
-            margin: 0 0 0 350px;
-        }
-        .inp{
-            width: 300px;
-            background: lightgray;
-        }
-        .paginat{
-            margin: 0 0 0 390px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-
+<div>
 <form action="statistic.php" method="post" >
-    <a class="paginat" href="move.php">Статистика</a>
+
+    <a href="move.php">Статистика</a>
+
     <h1>Тест по PHP</h1>
-    <input class="inp" type="text" name="name" placeholder="Ваше ім'я">
+    <input class="name" type="text" name="name" placeholder="Ваше ім'я" required>
     <p>
         <p>1.Що означає абревіатура php?</p>
         <input type="radio" name="question1" value="1"> Public hosting platt <br>
@@ -110,8 +72,8 @@
     <input type="radio" name="question8" value="3"> float <br>
     <input type="radio" name="question8" value="4"> bool <br>
     </p>
-
-    <input type="submit" value="Отправить">
+    <button type="submit">Відправить</button>
 </form>
+</div>
 </body>
 </html>
