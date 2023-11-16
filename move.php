@@ -1,14 +1,14 @@
 <?php
 include_once 'header.php';
+
 ?>
 <body>
 <div>
-
-    <a class="but" href="index.php">Назад</a>
+    <a  href="index.php">Назад</a>
 
     <?php
-    $db = new PDO('mysql:host=localhost;dbname=vodila', 'root', '');
-    $stmt = $db->query('SELECT * FROM users');
+    $db = new PDO('mysql:host=localhost;dbname=quiz', 'root', '');
+    $stmt = $db->query('SELECT * FROM results ORDER BY correct_answer DESC LIMIT 10;');
     echo '<table>
   <tr>
     <th scope="col">Ім\'я</th>
@@ -17,8 +17,8 @@ include_once 'header.php';
     <th scope="col">Неправильні</th>
   </tr>';
 
-    // Loop through the results and generate table rows
-    while ($row = $stmt->fetch()) {
+    while ($row = $stmt->fetch())
+    {
         echo '<tr>
       <td>' . $row['name'] . '</td>
       <td>' . $row['count'] . '</td>
@@ -27,7 +27,9 @@ include_once 'header.php';
     </tr>';
     }
     $db = null;
+    $stmt=null;
     ?>
+
 
 </div>
 </body>

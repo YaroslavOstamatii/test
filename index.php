@@ -1,14 +1,17 @@
 <?php
 include_once 'header.php';
+
 ?>
 <body>
 <div>
 <form action="statistic.php" method="post" >
 
-    <a class="but" href="move.php">Статистика</a>
+    <a  href="move.php">Статистика</a>
 
     <h1>Тест по PHP</h1>
-    <input class="name" type="text" name="name" placeholder="Ваше ім'я" required>
+    <label>
+        <input class="name" type="text" name="name" placeholder="Ваше ім'я" required>
+    </label>
     <p>
         <p>1.Що означає абревіатура php?</p>
         <input type="radio" name="question1" value="1"> Public hosting platt <br>
@@ -68,6 +71,7 @@ include_once 'header.php';
     </p>
     <button type="submit">Відправить</button>
 </form>
+
 </div>
 </body>
 </html>

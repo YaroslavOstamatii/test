@@ -1,10 +1,10 @@
 <?php
 include_once 'header.php';
+
 ?>
 <body>
 <div>
-
-    <a  class="but" href="index.php">Назад</a>
+    <a  href="index.php">Назад</a>
 
     <?php
     $name = $_POST['name'];
@@ -28,19 +28,18 @@ include_once 'header.php';
         }
     }
     $userName=$_POST['name'];
-    $db = new PDO('mysql:host=localhost;dbname=vodila', 'root', '');
-    $query = $db->prepare('INSERT INTO users ( name, count,correct_answer,wrong_answer) VALUES (?,?,?,?)');
+    $db = new PDO('mysql:host=localhost;dbname=quiz', 'root', '');
+
+    $query = $db->prepare('INSERT INTO results ( name, count,correct_answer,wrong_answer) VALUES (?,?,?,?)');
     $query->execute(array($userName, count($correctAnswers), $correct_answers_count,count($correctAnswers) - $correct_answers_count));
-
-    echo '<h1>І\'мя '. $userName . '</h1>';
-    echo '<h1>Всього питань:' . count($correctAnswers) . '</h1>';
-    echo '<p>Правильних питань: ' . $correct_answers_count . '</p>';
-    echo '<p>Неправильні відповіді ' . (count($correctAnswers) - $correct_answers_count) . '</p>';
+    echo '<p>Ви пройшли тест <b>'. $userName . '!</b></p>';
+    echo '<p>Ось ваш результат:</br></p>';
+    echo '<p><b>Всього питань</b>: ' . count($correctAnswers) . '</p>';
+    echo '<p><b>Правильні відповіді:</b> ' . $correct_answers_count . '</p>';
+    echo '<p><b>Неправильні відповіді:</b> ' . (count($correctAnswers) - $correct_answers_count) . '</p>';
+    $db = null;
+    $stmt=null;
     ?>
-
-    <h1>Статистика</h1>
-    <h1>Тест по PHP</h1>
-<div>
-
+    </div>
 </body>
 </html>
