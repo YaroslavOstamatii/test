@@ -11,8 +11,8 @@ div {
     padding: 20px;
     background-color: white;
 }
-a {
-    margin: 0 0 0 370px;
+a.but {
+    float: right;
     text-decoration: none;
 }
 button{
@@ -21,7 +21,7 @@ button{
     background: #9A72AC;
     cursor:pointer;
     border-radius: 5px;
-    margin: 0 0 0 370px;
+    float: right;
 }
 .name{
     width: 300px;

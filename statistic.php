@@ -1,15 +1,10 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Статистикаa</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php
+include_once 'header.php';
+?>
 <body>
 <div>
 
-    <a href="index.php">Назад</a>
+    <a  class="but" href="index.php">Назад</a>
 
     <?php
     $name = $_POST['name'];
