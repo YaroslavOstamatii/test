@@ -14,10 +14,10 @@ include_once 'header.php';
     </label>
     <p>
         <p>1.Що означає абревіатура php?</p>
-        <input type="radio" name="question1" value="1"> Public hosting platt <br>
-        <input type="radio" name="question1" value="2"> perfomance platjjfj <br>
+        <input type="radio" name="question1" value="1"> Public hosting platform<br>
+        <input type="radio" name="question1" value="2"> perfomance platform <br>
         <input type="radio" name="question1" value="3"> PHP hypertext preprossesor <br>
-        <input type="radio" name="question1" value="4"> hypertext <br>
+        <input type="radio" name="question1" value="4"> public hyper point<br>
     </p>
 
     <p>
