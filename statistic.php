@@ -7,7 +7,6 @@ include_once 'header.php';
     <a  href="index.php">Назад</a>
 
     <?php
-    $name = $_POST['name'];
 
     $correctAnswers = [
         'question1' => '3',
@@ -27,7 +26,7 @@ include_once 'header.php';
             $correct_answers_count+=1;
         }
     }
-    $userName=$_POST['name'];
+    $userName=htmlspecialchars($_POST['name']);
     $db = new PDO('mysql:host=localhost;dbname=quiz', 'root', '');
 
     $query = $db->prepare('INSERT INTO results ( name, count,correct_answer,wrong_answer) VALUES (?,?,?,?)');
